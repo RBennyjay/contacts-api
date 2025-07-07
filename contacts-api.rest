@@ -1,0 +1,20 @@
+### Get all contacts
+GET http://localhost:8080/contacts
+Content-Type: application/json
+
+###
+### Get contact by ID - Ebenezer John
+GET http://localhost:8080/contacts/686b302b6dd96d3434c845ad
+Content-Type: application/json
+
+###
+
+### Get contact by ID - Michael Okafor
+GET http://localhost:8080/contacts/686b302b6dd96d3434c845ae
+Content-Type: application/json
+
+###
+
+### Get contact by ID - Ola Bassey
+GET http://localhost:8080/contacts/686b302b6dd96d3434c845af
+Content-Type: application/json

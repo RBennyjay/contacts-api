@@ -9,19 +9,26 @@ dotenv.config();
 app.use(cors());
 app.use(express.json());
 
-// const contactsRoutes = require('./routes/contacts');
-// app.use('/contacts', contactsRoutes);
+// Root route
+app.get('/', (req, res) => {
+  res.send('Contacts API is running 🚀');
+});
 
+// Contact routes
 const contactRoutes = require('./routes/contacts');
 app.use('/contacts', contactRoutes);
 
-
+// ✅ MongoDB Connection with enhanced logging
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
-.then(() => console.log('✅ MongoDB connected'))
+.then(() => {
+  console.log('✅ MongoDB connected');
+  console.log(`📦 DB URI: ${process.env.MONGODB_URI}`);
+})
 .catch(err => console.error('❌ MongoDB connection failed:', err));
 
+// Start server
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`🚀 Server running at http://localhost:${PORT}`));

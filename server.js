@@ -9,7 +9,7 @@ dotenv.config();
 app.use(cors());
 app.use(express.json());
 
-// Root route
+// 🔽 Add root route 
 app.get('/', (req, res) => {
   res.send('Contacts API is running 🚀');
 });
@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 const contactRoutes = require('./routes/contacts');
 app.use('/contacts', contactRoutes);
 
-// ✅ MongoDB Connection with enhanced logging
+// MongoDB connection
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true

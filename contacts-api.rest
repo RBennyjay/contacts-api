@@ -3,18 +3,48 @@ GET http://localhost:8080/contacts
 Content-Type: application/json
 
 ###
-### Get contact by ID - Ebenezer John
-GET http://localhost:8080/contacts/686b302b6dd96d3434c845ad
+### Get contact by ID - Bob Johnson
+GET http://localhost:8080/contacts/68756c96057fc912398da002
 Content-Type: application/json
 
 ###
 
-### Get contact by ID - Michael Okafor
-GET http://localhost:8080/contacts/686b302b6dd96d3434c845ae
+### Get contact by ID - Charlie Brown
+GET http://localhost:8080/contacts/68756c96057fc912398da003
 Content-Type: application/json
 
 ###
 
-### Get contact by ID - Ola Bassey
-GET http://localhost:8080/contacts/686b302b6dd96d3434c845af
+### Get contact by ID - Diana Prince
+GET http://localhost:8080/contacts/68756c96057fc912398da004
 Content-Type: application/json
+
+
+### Create a new contact
+POST http://localhost:8080/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Daniel",
+  "lastName": "Bassey",
+  "email": "danny.bassey@example.com", 
+  "favoriteColor": "green",
+  "birthday": "1988-08-22T00:00:00.000Z"
+}
+
+###
+### Update a contact
+PUT http://localhost:8080/contacts/6875894a4789754f4743d36a
+Content-Type: application/json
+
+{
+  "firstName": "Jane",
+  "lastName": "Austin",
+  "email": "jane.austin@example.com",
+  "phone": "+23480711229090",
+  "favoriteColor": "pink"
+}
+
+###
+### Delete a contact
+DELETE http://localhost:8080/contacts/68758ec64789754f4743d37e

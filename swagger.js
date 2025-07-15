@@ -11,9 +11,14 @@ const options = {
     },
     servers: [
       {
-        url: 'http://localhost:8080',
+        url: 'https://contacts-api-vy4b.onrender.com',
+        description: 'Production server'
       },
-    ],
+      {
+        url: 'http://localhost:8080',
+        description: 'Local server'
+      }
+    ]
   },
   apis: ['./routes/*.js'], // Path to your route files with Swagger comments
 };

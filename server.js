@@ -19,7 +19,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes: Mount contactsRoutes at the root
-app.use('/', contactsRoutes); // <--- CHANGE THIS LINE TO '/'
+app.use('/', contactsRoutes); 
 
 // Root route
 app.get('/', (req, res) => res.send('Contacts API Running'));
